@@ -16,13 +16,17 @@ FizzBuzz.prototype.isDivisibleByThreeAndFive = function(number){
 FizzBuzz.prototype.printer = function(number){
   if (FizzBuzz.prototype.isDivisibleByThreeAndFive(number)) {
     return 'FizzBuzz!';
-  } else {
-    if (FizzBuzz.prototype.isDivisibleByThree(number)) {
+  } else if (FizzBuzz.prototype.isDivisibleByThree(number)) {
       return 'Fizz';
-    } else if (FizzBuzz.prototype.isDivisibleByFive(number)) {
+  } else if (FizzBuzz.prototype.isDivisibleByFive(number)) {
       return 'Buzz';
-    } else {
+  } else {
       return number;
-    }
+  };
+};
+
+FizzBuzz.prototype.game = function(limit){
+  for (i = 1;i<=limit;i++){
+    console.log(FizzBuzz.prototype.printer(i));
   };
 };

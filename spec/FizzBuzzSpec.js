@@ -29,3 +29,13 @@ describe("The game: key methods", function(){ // the following is like the 'do' 
   });
 
 });
+
+describe("Playing a game of FizzBuzz:", function(){
+  var fizzbuzz = new FizzBuzz();
+
+  it("runs fp.print from 1 to 101", function(){
+    spyOn(console, 'log');
+    fizzbuzz.game(101);
+    expect(console.log).toHaveBeenCalledWith(101);
+  });
+});
